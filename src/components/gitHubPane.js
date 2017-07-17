@@ -1,34 +1,68 @@
 import React, { Component } from 'react';
-import { Grid, Card } from 'semantic-ui-react';
-
-const extra = (
-  <div>
-    <a>
-      16 Friends
-    </a>
-  </div>
-)
+import ProfileCard from './profileCard';
+import InfoCard from './infoCard';
+import RepoList from './RepoList';
+import { githubUserFormatter, githubRepoFormatter, findUniqueLanguages } from '../lib/github';
+import { Grid } from 'semantic-ui-react';
+import axios from 'axios';
 
 class GitHubPane extends Component {
+  constructor(){
+    super()
+    this.state = {
+      user: {
+        name:'',
+        image:'',
+        url:'',
+        bio:'',
+        info: []
+      },
+      languages: {},
+      repos: []
+    }
+  }
+
+  fetchUserInfo = () =>{
+    const URL = 'https://api.github.com/users/hyunkim95'
+    axios.get(URL)
+      .then((response) => {
+        this.setState(githubUserFormatter(response))
+      });
+  }
+
+  fetchAllRepo = () => {
+    const URL = 'https://api.github.com/users/hyunkim95/repos?sort=created'
+    axios.get(URL)
+      .then((response) => {
+        this.setState(githubRepoFormatter(response),
+        () => this.setState(findUniqueLanguages(this.state.repos)))
+      })
+  }
+
+  componentDidMount(){
+    this.fetchUserInfo()
+    this.fetchAllRepo()
+  }
+
   render() {
     return (
       <div>
-        <Grid>
+        <Grid stackable>
           <Grid.Row>
             <Grid.Column width={6}>
-              <Card
-                image="https://react.semantic-ui.com/assets/images/avatar/large/elliot.jpg"
-                header='Elliot Baker'
-                meta='Friend'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-                extra = {extra}
-              />
+             <ProfileCard
+               user={this.state.user}
+             />
             </Grid.Column>
             <Grid.Column width={10}>
-              <Card
-                fluid
-                header='Daniel RadCliffe'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+              <InfoCard
+                user={this.state.user}
+                languages={this.state.languages}
+                type="Github"
+              />
+              <div className="spacer"></div>
+              <RepoList
+                repos={this.state.repos}
               />
             </Grid.Column>
           </Grid.Row>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Container, Segment} from 'semantic-ui-react';
 import './stylesheet/App.css';
 import ToggleButton from './components/toggleButton';
-import ProfileCard from './components/profile-card';
 import githubPane from './components/githubPane';
 import linkedInPane from './components/linkedInPane';
 
@@ -19,7 +18,7 @@ class App extends Component {
       activeTab: 'github',
       tabContent: {
         github: githubPane,
-        linkedin: LinkedInPane
+        linkedin: linkedInPane
       }
     }
   }
@@ -31,7 +30,7 @@ class App extends Component {
   render() {
     var TabContent = this.state.tabContent[this.state.activeTab]
     return (
-      <div className="background">
+      <div className="background padding-bottom">
         <div className="padding-top"></div>
           <Container textAlign='center'>
             <ToggleButton
@@ -43,9 +42,12 @@ class App extends Component {
 
           <Container>
             <Segment>
-              <TabContent/>
+              <TabContent
+                activeTab = {this.state.activeTab}
+              />
             </Segment>
           </Container>
+
       </div>
     );
   }
