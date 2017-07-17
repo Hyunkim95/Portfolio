@@ -9,7 +9,7 @@ const extra = (
   </div>
 )
 
-class TabPane extends Component {
+class linkedInPane extends Component {
   render() {
     return (
       <div>
@@ -38,4 +38,4 @@ class TabPane extends Component {
   }
 }
 
-export default TabPane;
+export default linkedInPane;

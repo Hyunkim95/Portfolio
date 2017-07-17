@@ -3,7 +3,8 @@ import { Grid, Container, Segment} from 'semantic-ui-react';
 import './stylesheet/App.css';
 import ToggleButton from './components/toggleButton';
 import ProfileCard from './components/profile-card';
-import TabPane from './components/tabPane';
+import githubPane from './components/githubPane';
+import linkedInPane from './components/linkedInPane';
 
 function changeState(key,value) {
   return function update(state){
@@ -15,7 +16,11 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      activeTab: 'github'
+      activeTab: 'github',
+      tabContent: {
+        github: githubPane,
+        linkedin: LinkedInPane
+      }
     }
   }
 
@@ -24,6 +29,7 @@ class App extends Component {
   }
 
   render() {
+    var TabContent = this.state.tabContent[this.state.activeTab]
     return (
       <div className="background">
         <div className="padding-top"></div>
@@ -37,7 +43,7 @@ class App extends Component {
 
           <Container>
             <Segment>
-              <TabPane/>
+              <TabContent/>
             </Segment>
           </Container>
       </div>
