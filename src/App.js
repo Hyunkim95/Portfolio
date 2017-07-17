@@ -35,6 +35,7 @@ class App extends Component {
           <Container textAlign='center'>
             <ToggleButton
               changeTab = {this.changeTab}
+              activeTab = {this.state.activeTab}
             />
           </Container>
 

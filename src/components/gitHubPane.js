@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ProfileCard from './profileCard';
+import NewsFeed from './newsFeed';
 import InfoCard from './infoCard';
 import RepoList from './RepoList';
 import { githubUserFormatter, githubRepoFormatter, findUniqueLanguages } from '../lib/github';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Feed} from 'semantic-ui-react';
 import axios from 'axios';
 
 class GitHubPane extends Component {
@@ -53,6 +54,8 @@ class GitHubPane extends Component {
              <ProfileCard
                user={this.state.user}
              />
+             <div className="spacer"></div>
+             <NewsFeed/>
             </Grid.Column>
             <Grid.Column width={10}>
               <InfoCard

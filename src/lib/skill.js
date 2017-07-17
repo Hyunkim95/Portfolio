@@ -1,5 +1,11 @@
 export const skills_obj = (skill) => {
-  switch(skill){
+  if(skill == null) return(
+    {
+      image: "",
+      color: 'red'
+    }
+  )
+  switch(skill.toLowerCase()){
     case "python":
       return(
         {
