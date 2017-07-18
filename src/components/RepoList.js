@@ -12,14 +12,18 @@ class RepoList extends Component {
 
   previousPage = () =>{
     var count = this.state.counter
-    count = count - 1
-    this.setState({counter: count})
+    if((count - 1) >= 0){
+      count = count - 1
+      this.setState({counter: count})
+    }
   }
 
   nextPage = () =>{
     var count = this.state.counter
-    count = count + 1
-    this.setState({counter: count})
+    if(count + 1 <= (Math.ceil(this.props.repos.length / 5)-2)){
+      count = count + 1
+      this.setState({counter: count})
+    }
   }
 
   render(){
@@ -42,7 +46,8 @@ class RepoList extends Component {
                 <Item.Meta>
                   <span>{repo.created_at}</span>
                 </Item.Meta>
-                <Item.Description>{repo.description.replace(/portfolio/, '')}</Item.Description>
+                {/* .replace(/portfolio/, '') */}
+                <Item.Description>{repo.description}</Item.Description>
                 <Item.Extra>
                   <Label as='a' color={skills_obj(repo.language).color} image>
                     {repo.language == null ? (null) : <img src={skills_obj(repo.language).image} />}
