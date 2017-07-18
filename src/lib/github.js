@@ -34,6 +34,7 @@ export const githubRepoFormatter = (response) => {
           match = match[0]
         }
       }
+
         return {
           name: repo.name,
           description: description.replace(/(?:https?|ftp):\/\/[\n\S]+/g, ''),
@@ -43,8 +44,11 @@ export const githubRepoFormatter = (response) => {
           url: repo.html_url
         }
       })
+  var filtered = array.filter((repo) => {
+    return repo.description.includes("portfolio")
+  })
   return {
-    repos: array
+    repos: filtered
   }
 }
 
