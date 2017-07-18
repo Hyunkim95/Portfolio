@@ -44,11 +44,11 @@ export const githubRepoFormatter = (response) => {
           url: repo.html_url
         }
       })
-  // var filtered = array.filter((repo) => {
-  //   return repo.description.includes("portfolio")
-  // })
+  var filtered = array.filter((repo) => {
+    return repo.description.includes("portfolio")
+  })
   return {
-    repos: array
+    repos: filtered
   }
 }
 
