@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { recentActivity } from '../lib/github.js';
 import axios from 'axios';
+import '../stylesheet/newsFeed.css'
 import { Feed } from 'semantic-ui-react';
 
 class NewsFeed extends Component {
@@ -25,7 +26,9 @@ class NewsFeed extends Component {
 
   render(){
     return(
-      <Feed events={this.state.events} />
+      <div className="mobile-none">
+        <Feed events={this.state.events} />
+      </div>
     )
   }
 }

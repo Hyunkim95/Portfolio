@@ -7,7 +7,7 @@ class ToggleButton extends Component {
     var activeTab = this.props.activeTab
     return (
       <div>
-        <Button.Group size='massive'>
+        <Button.Group size='huge'>
           <Button
             color={activeTab == 'github' ? 'blue' : 'grey'}
             onClick={()=>changeTab('github')}>

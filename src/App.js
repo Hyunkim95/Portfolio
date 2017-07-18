@@ -92,12 +92,13 @@ class App extends Component {
     return (
       <div className="background padding-bottom">
         <div className="padding-top"></div>
-          <Container textAlign='center'>
-            <ToggleButton
-              changeTab = {this.changeTab}
-              activeTab = {this.state.activeTab}
-            />
-          </Container>
+
+            <div className="center">
+              <ToggleButton
+                changeTab = {this.changeTab}
+                activeTab = {this.state.activeTab}
+              />
+            </div>
 
           <div className="spacer"></div>
 

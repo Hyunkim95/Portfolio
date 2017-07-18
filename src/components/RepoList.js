@@ -53,10 +53,12 @@ class RepoList extends Component {
             </Item>
           )}
         </Item.Group>
-        <Menu pagination>
-          <Menu.Item disabled={this.state.counter == 0} name='previous' onClick={this.previousPage} />
-          <Menu.Item disabled={this.state.counter == (Math.ceil(this.props.repos.length / 5)-2)} name='next' onClick={this.nextPage}/>
-        </Menu>
+        <div className="center-children">
+          <Menu pagination>
+            <Menu.Item disabled={this.state.counter == 0} name='previous' onClick={this.previousPage} />
+            <Menu.Item disabled={this.state.counter == (Math.ceil(this.props.repos.length / 5)-2)} name='next' onClick={this.nextPage}/>
+          </Menu>
+        </div>
       </div>
     )
   }

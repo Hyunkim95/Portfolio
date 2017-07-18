@@ -16,13 +16,13 @@ class GitHubPane extends Component {
     var repos = this.props.repos
     return (
       <div>
-        <Grid stackable>
+        <Grid doubling centered stackable>
           <Grid.Row>
             <Grid.Column width={6}>
              <ProfileCard
                user={user}
              />
-             <div className="spacer"></div>
+             <div className="spacer mobile-none"></div>
              <NewsFeed/>
             </Grid.Column>
             <Grid.Column width={10}>

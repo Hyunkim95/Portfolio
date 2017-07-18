@@ -2,6 +2,12 @@
   background-color: #F6F6F6;
 }
 
+.flexbox{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 .spacer{
   margin-bottom: 3em;
 }
@@ -10,6 +16,10 @@
   padding-top: 3em;
 }
 
+.center{
+  text-align: center;
+}
+
 .padding-bottom{
-  padding-bottom: 10em;
+  padding-bottom: 5em;
 }
