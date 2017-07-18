@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { URL } from '../config/config';
 import { recentActivity } from '../lib/github.js';
 import axios from 'axios';
 import '../stylesheet/newsFeed.css'
@@ -13,8 +14,7 @@ class NewsFeed extends Component {
   }
 
   newsfeed = () => {
-    const URL = 'https://api.github.com/users/hyunkim95/events'
-    axios.get(URL)
+    axios.get(URL + "/events")
       .then((response) => {
         this.setState(recentActivity(response))
       })

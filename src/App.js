@@ -3,6 +3,7 @@ import { Grid, Container, Segment} from 'semantic-ui-react';
 import './stylesheet/App.css';
 import axios from 'axios';
 import { githubUserFormatter, githubRepoFormatter, findUniqueLanguages } from './lib/github';
+import { URL } from './config/config'
 import ToggleButton from './components/toggleButton';
 import gitHubPane from './components/gitHubPane';
 import contactForm from './components/contactForm';
@@ -50,7 +51,6 @@ class App extends Component {
   }
 
   fetchUserInfo = () =>{
-    const URL = 'https://api.github.com/users/hyunkim95'
     axios.get(URL)
       .then((response) => {
         this.setState(githubUserFormatter(response))
@@ -58,8 +58,7 @@ class App extends Component {
   }
 
   fetchAllRepo = () => {
-    const URL = 'https://api.github.com/users/hyunkim95/repos?sort=created'
-    axios.get(URL)
+    axios.get(URL + "/repos?sort=created")
       .then((response) => {
         this.setState(githubRepoFormatter(response),
         () => this.setState(findUniqueLanguages(this.state.repos)))
