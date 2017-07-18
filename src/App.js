@@ -4,7 +4,7 @@ import './stylesheet/App.css';
 import axios from 'axios';
 import { githubUserFormatter, githubRepoFormatter, findUniqueLanguages } from './lib/github';
 import ToggleButton from './components/toggleButton';
-import githubPane from './components/githubPane';
+import gitHubPane from './components/gitHubPane';
 import contactForm from './components/contactForm';
 
 function changeState(key,value) {
@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       activeTab: 'github',
       tabContent: {
-        github: githubPane,
+        github: gitHubPane,
         contact: contactForm
       },
       user: {
