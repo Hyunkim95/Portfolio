@@ -16,8 +16,10 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "start-js": "npm-run-all -p watch-css start-js",
     "start": "react-scripts start",
-    "build": "npm run build-css && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
