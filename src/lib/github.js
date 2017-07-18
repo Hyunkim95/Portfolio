@@ -26,7 +26,7 @@ export const githubRepoFormatter = (response) => {
       description = ""
     }
       var match = description.match(/(https?:\/\/.*\.(?:png|jpg))/)
-      var default_image = 'https://cdn0.iconfinder.com/data/icons/web-and-apps-develop/512/coding_php_code_html_programming_web_java_script_editor_website_development_css_build_program_flat_design_icon-512.png'
+      var default_image = 'http://i.imgur.com/lzBkVoR.png'
       if(match == null){
         match = default_image
       } else {
