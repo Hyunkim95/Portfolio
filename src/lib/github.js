@@ -69,5 +69,5 @@ export const recentActivity = (response) => {
       summary: `${activity.actor.login} has made a ${activity.type} in ${activity.repo.name}`
     }
   })
-  return { events: array.slice(0,6)}
+  return { events: array }
 }
