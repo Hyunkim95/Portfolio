@@ -25,7 +25,7 @@ class InfoCard extends Component {
                 <br/>
                 <br/>
                 {Object.keys(languages).map((key) =>
-                  <Label as='a' color={skills_obj(key).color} image>
+                  <Label className="margin5" as='a' color={skills_obj(key).color} image>
                     <img src={skills_obj(key).image} />
                     {key}
                   </Label>

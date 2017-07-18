@@ -1,3 +1,7 @@
 .skill-tag{
   margin-top: 1.5em;
 }
+
+.ui.image.label{
+  margin: 0.2em !important;
+}
