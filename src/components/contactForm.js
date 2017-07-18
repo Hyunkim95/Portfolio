@@ -9,7 +9,7 @@ class contactForm extends Component {
     var user = this.props.user
     return (
       <div>
-        <Grid stackable>
+        <Grid centered stackable>
           <Grid.Row>
             <Grid.Column>
               <div className="center-children">
@@ -23,7 +23,7 @@ class contactForm extends Component {
           </Grid.Row>
 
           <Grid.Row>
-            <Grid.Column>
+            <Grid.Column width={13}>
               {form.success ? (
                 <Message
                   success
