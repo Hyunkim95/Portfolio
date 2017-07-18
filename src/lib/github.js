@@ -70,5 +70,5 @@ export const recentActivity = (response) => {
     }
   })
 
-  return { events: array }
+  return { events: array.slice(0,9) }
 }
