@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProfileCard from './profileCard';
-import NewsFeed from './NewsFeed';
+import NewsFeed from './newsFeed';
 import InfoCard from './infoCard';
 import RepoList from './RepoList';
 import { Grid, Feed} from 'semantic-ui-react';
