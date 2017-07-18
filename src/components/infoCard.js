@@ -21,7 +21,7 @@ class InfoCard extends Component {
               </div>
 
               <div className="skill-tag">
-                According to <i>{this.props.type}</i> Hyun is good at:
+                According to <i>{this.props.type}</i> {user.name} is good at:
                 <br/>
                 <br/>
                 {Object.keys(languages).map((key) =>
