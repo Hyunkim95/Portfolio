@@ -9,17 +9,17 @@ class ToggleButton extends Component {
       <div>
         <Button.Group size='massive'>
           <Button
-            color={activeTab == 'github' ? 'linkedin' : 'grey'}
+            color={activeTab == 'github' ? 'blue' : 'grey'}
             onClick={()=>changeTab('github')}>
             <Icon name='github alternate'/>
             GitHub
           </Button>
             <Button.Or />
           <Button
-            color={activeTab == 'linkedin' ? 'linkedin' : 'grey'}
-            onClick={()=>changeTab('linkedin')}>
-            <Icon name='linkedin' />
-            LinkedIn
+            color={activeTab == 'contact' ? 'blue' : 'grey'}
+            onClick={()=>changeTab('contact')}>
+            <Icon name='mail outline' />
+            Contact
           </Button>
         </Button.Group>
       </div>

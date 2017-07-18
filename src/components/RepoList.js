@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { skills_obj } from '../lib/skill.js';
-import { Item, Label } from 'semantic-ui-react';
+import { Item, Label, Menu} from 'semantic-ui-react';
 
 class RepoList extends Component {
   constructor(props){
@@ -53,8 +53,10 @@ class RepoList extends Component {
             </Item>
           )}
         </Item.Group>
-        <button disabled={this.state.counter == 0} onClick={this.previousPage}>previous</button>
-        <button disabled={this.state.counter == (Math.ceil(this.props.repos.length / 5)-2)} onClick={this.nextPage}>next</button>
+        <Menu pagination>
+          <Menu.Item disabled={this.state.counter == 0} name='previous' onClick={this.previousPage} />
+          <Menu.Item disabled={this.state.counter == (Math.ceil(this.props.repos.length / 5)-2)} name='next' onClick={this.nextPage}/>
+        </Menu>
       </div>
     )
   }
