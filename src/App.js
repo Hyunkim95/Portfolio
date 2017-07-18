@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   fetchAllRepo = () => {
-    axios.get(URL + "/repos?sort=created")
+    axios.get(URL + "/repos?sort=updated")
       .then((response) => {
         this.setState(githubRepoFormatter(response),
         () => this.setState(findUniqueLanguages(this.state.repos)))
