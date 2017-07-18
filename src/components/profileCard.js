@@ -1,12 +1,16 @@
 import React from 'react';
 import '../stylesheet/profileCard.css';
-import { Grid, Card, Image } from 'semantic-ui-react';
+import { Grid, Card, Image, Icon} from 'semantic-ui-react';
 
 const ProfileCard = (user) => {
   const extra = (
-    <div>
-      <a>
-        16 Friends
+    <div className="social-media">
+      <a href="https://github.com/Hyunkim95"  target="_blank">
+        <Icon large name="github"/>
+      </a>
+
+      <a href="https://www.linkedin.com/in/hyun-kim-71aa5897/" target="_blank">
+        <Icon large name="linkedin"/>
       </a>
     </div>
   )

@@ -27,7 +27,12 @@ class App extends Component {
         image:'',
         url:'',
         bio:'',
-        info: []
+        info: {
+          username: '',
+          email: '',
+          repos: '',
+          location: ''
+        }
       },
       languages: {},
       repos: [],

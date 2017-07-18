@@ -6,6 +6,7 @@ class contactForm extends Component {
   render() {
     var handleChange = this.props.handleChange
     var form = this.props.form
+    var user = this.props.user
     return (
       <div>
         <Grid stackable>
@@ -34,7 +35,7 @@ class contactForm extends Component {
               )}
 
               <Form>
-                <Form.Field action="hkim@live.com.au" method="post">
+                <Form.Field action={user.info.email} method="post">
                   <label>First Name</label>
                   <input placeholder='First Name' name="firstName" value={form.firstName} onChange ={handleChange}/>
                 </Form.Field>

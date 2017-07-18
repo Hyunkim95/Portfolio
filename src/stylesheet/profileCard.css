@@ -1,3 +1,7 @@
 .capitalize{
   text-transform: capitalize;
 }
+
+.social-media a{
+  font-size: 2em;
+}
