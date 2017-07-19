@@ -34,7 +34,7 @@ class InfoCard extends Component {
                 )}
               </div>
 
-              <div className="skill-tag mobile-none">
+              <div className="skill-tag">
                 <Bar
                   languages = {languages}
                   total = {total}
