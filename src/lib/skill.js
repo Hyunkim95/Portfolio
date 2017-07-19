@@ -2,7 +2,8 @@ export const skills_obj = (skill) => {
   if(skill == null) return(
     {
       image: "",
-      color: 'red'
+      color: 'red',
+      bg: '#DB2828'
     }
   )
   switch(skill.toLowerCase()){
@@ -10,7 +11,8 @@ export const skills_obj = (skill) => {
       return(
         {
           image: require('../assets/images/python.png'),
-          color: 'blue'
+          color: 'blue',
+          bg: '#2185D0'
         }
       )
     break;
@@ -18,7 +20,8 @@ export const skills_obj = (skill) => {
       return(
         {
            image: require('../assets/images/javascript.svg'),
-           color: 'orange'
+           color: 'orange',
+           bg: '#F2711C'
          }
       )
     break;
@@ -26,7 +29,8 @@ export const skills_obj = (skill) => {
       return(
         {
            image: require('../assets/images/html.png'),
-           color: 'yellow'
+           color: 'yellow',
+           bg: '#FBBD08'
          }
       )
     break;
@@ -34,7 +38,8 @@ export const skills_obj = (skill) => {
       return(
         {
            image: require('../assets/images/css.svg'),
-           color: 'brown'
+           color: 'brown',
+           bg:"#A5673F"
          }
       )
     break;
@@ -42,7 +47,8 @@ export const skills_obj = (skill) => {
       return(
         {
            image: require('../assets/images/ruby.png'),
-           color: 'green'
+           color: 'green',
+           bg: "#21BA45"
          }
       )
     break;
@@ -50,7 +56,8 @@ export const skills_obj = (skill) => {
       return(
         {
           image: "",
-          color: 'red'
+          color: 'red',
+          bg: '#DB2828'
         }
       )
   }

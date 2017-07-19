@@ -66,8 +66,12 @@ export const findUniqueLanguages = (state) => {
       count[repo.language] = Object.keys(repo.language).length
     }
   })
+
+  var total =  _.sum(_.values(count))
+
   return {
-    languages: count
+    languages: count,
+    total: total
   }
 }
 

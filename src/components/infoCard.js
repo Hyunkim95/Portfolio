@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import '../stylesheet/infoCard.css';
 import { skills_obj } from '../lib/skill.js';
+import Bar from './bar'
 import { Grid, Card, Image, Label} from 'semantic-ui-react';
 
 class InfoCard extends Component {
   render(){
     var user = this.props.user
     var languages = this.props.languages
+    var total = this.props.total
     return(
       <div>
         <Card fluid>
@@ -30,6 +32,13 @@ class InfoCard extends Component {
                     {key}
                   </Label>
                 )}
+              </div>
+
+              <div className="skill-tag mobile-none">
+                <Bar
+                  languages = {languages}
+                  total = {total}
+                />
               </div>
             </Card.Description>
           </Card.Content>

@@ -112,6 +112,7 @@ class App extends Component {
                 languages = {this.state.languages}
                 projects = {this.state.projects}
                 tutorials = {this.state.tutorials}
+                total = {this.state.total}
               />
             </Segment>
           </Container>

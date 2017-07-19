@@ -15,7 +15,7 @@ class GitHubPane extends Component {
     var languages = this.props.languages
     var projects = this.props.projects
     var tutorials = this.props.tutorials
-
+    var total = this.props.total
     const panes = [
       { menuItem: 'Projects', render: () =>
       <Tab.Pane attached={false}>
@@ -47,6 +47,7 @@ class GitHubPane extends Component {
                 user={user}
                 languages={languages}
                 type="Github"
+                total = {total}
               />
               <div className="spacer"></div>
               <Tab menu={{ secondary: true, pointing: true }} panes={panes} />

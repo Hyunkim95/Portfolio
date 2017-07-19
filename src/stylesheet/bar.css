@@ -1,0 +1,10 @@
+.total-bar{
+  width: 100%;
+  display: flex;
+}
+
+.popup-image{
+  width: auto!important;
+  vertical-align: middle;
+  height: 2.1666em!important;
+}
