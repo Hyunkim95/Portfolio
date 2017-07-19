@@ -44,11 +44,18 @@ export const githubRepoFormatter = (response) => {
           url: repo.html_url
         }
       })
-  // var filtered = array.filter((repo) => {
-  //   return repo.description.includes("portfolio")
-  // })
+  var projects = array.filter((repo) => {
+    return repo.description.includes("project")
+  })
+
+  var tutorials = array.filter((repo) => {
+    return repo.description.includes("tutorial")
+  })
+
   return {
-    repos: array
+    repos: array,
+    projects: projects,
+    tutorials: tutorials
   }
 }
 

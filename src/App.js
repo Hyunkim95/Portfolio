@@ -36,7 +36,7 @@ class App extends Component {
         }
       },
       languages: {},
-      repos: [],
+      projects: [],
       form: {
         firstName: '',
         lastName: '',
@@ -110,7 +110,8 @@ class App extends Component {
                 form = {this.state.form}
                 user = {this.state.user}
                 languages = {this.state.languages}
-                repos = {this.state.repos}
+                projects = {this.state.projects}
+                tutorials = {this.state.tutorials}
               />
             </Segment>
           </Container>
