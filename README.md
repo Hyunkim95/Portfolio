@@ -15,3 +15,8 @@ The implemented features are the following:
   - number of repos 
 - the languages the user has used
 - statistic of languages
+- recent activities 
+
+## Future Implementation
+
+- integrate LinkedIn API
